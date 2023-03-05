@@ -1,1 +1,3 @@
-console.log('starting very soon');
+const loadCategories = () => {
+    fetch('')
+}
