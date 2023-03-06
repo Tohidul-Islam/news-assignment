@@ -27,6 +27,24 @@
             border-radius: 50%;
 
         }
+
+        .author-img img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .row {
+            margin: 4rem 0;
+            padding: 1rem;
+            background: white;
+            box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.137);
+            border-radius: 15px;
+        }
+
+        .fa-arrow-right {
+            font-size: 2rem;
+        }
     </style>
 </head>
 
@@ -43,7 +61,7 @@
                 <div class="justify-content-end" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="#">News</a>
@@ -70,16 +88,50 @@
     </header>
     <!-- main contents -->
     <main class="container">
-        <!-- categories number -->
+
+        <!-- news categories list or menubar -->
         <section>
-            <div class="rounded p-4 shadow ">
-                <h4>5 categories post found on Entertainment Categories</h4>
+            <nav class="navbar navbar-expand-lg border-bottom  bg-primary my-3 rounded">
+                <div class="container-fluid ">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="justify-content-end" id="navbarScroll">
+                        <ul id="news-categories" class="navbar-nav me-auto my-2 my-lg-0"
+                            style="--bs-scroll-height: 100px;">
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </section>
+
+
+        <!-- news cateogories number -->
+        <section>
+            <div id="news-categories-number" class="p-2 shadow">
+
             </div>
         </section>
-        <!-- news cateogories -->
+        <!-- news -->
         <section>
-            <div id="news-categories"></div>
+            <div id="news">
+                <div class="card mb-3 bg-primary" style="max-width: 800px;">
+
+                </div>
+            </div>
         </section>
+
+        <!-- Post Details Modal -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" id="modal-details">
+            </div>
+        </div>
+
     </main>
     <!-- Footer -->
     <footer class="py-4 mt-5 text-center bg-dark text-white">
