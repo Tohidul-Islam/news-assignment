@@ -35,10 +35,11 @@ const displayCategories = (data) => {
 const loadNews = async (categoryid) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${categoryid}`;
     try {
+        loadSpinner(true);
         const res = await fetch(url);
         const data = await res.json();
         displayNews(data.data)
-        loadSpinner(true);
+
     }
     catch (error) {
         console.log(error)
