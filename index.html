@@ -45,6 +45,10 @@
         .fa-arrow-right {
             font-size: 2rem;
         }
+
+        .navbar-toggler-icon {
+            color: white !important;
+        }
     </style>
 </head>
 
@@ -54,23 +58,24 @@
         <nav class="navbar navbar-expand-lg border-bottom">
             <div class="container-fluid ">
                 <a class="navbar-brand fw-bold text-warning" href="#">TI News</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler text-primary bg-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="justify-content-end" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+                <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav my-2 my-lg-0" style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">News</a>
+                            <a class="nav-link active" href="index.html">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blogs</a>
+                            <a class="nav-link" href="blog.html">Blogs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="index.html">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -94,13 +99,13 @@
             <nav class="navbar navbar-expand-lg border-bottom  bg-primary my-3 rounded">
                 <div class="container-fluid ">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="justify-content-end" id="navbarScroll">
-                        <ul id="news-categories" class="navbar-nav me-auto my-2 my-lg-0"
+                    <div class="justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="news-categories" class="navbar-nav me-auto mb-2 mb-lg-0"
                             style="--bs-scroll-height: 100px;">
                         </ul>
                     </div>
@@ -112,14 +117,22 @@
 
         <!-- news cateogories number -->
         <section>
-            <div id="news-categories-number" class="p-2 shadow">
+            <div id="news-categories-number" class="p-2 shadow d-none">
 
             </div>
+        </section>
+        <!-- todays blog and trending blog post -->
+        <section>
+            <div id="todays-pic-and-trending" class="d-none d-flex flex-row justify-content-between my-5">
+
+            </div>
+
+
         </section>
         <!-- news -->
         <section>
             <div id="news">
-                <div class="card mb-3 bg-primary" style="max-width: 800px;">
+                <div class="card mb-3 bg-primary border-0" style="max-width: 800px;">
 
                 </div>
             </div>
@@ -132,6 +145,12 @@
             </div>
         </div>
 
+        <!-- spinner -->
+        <div id="spinner" class="d-none d-flex justify-content-center text-primary">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
     </main>
     <!-- Footer -->
     <footer class="py-4 mt-5 text-center bg-dark text-white">
